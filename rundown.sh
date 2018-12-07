@@ -7,9 +7,3 @@ set -o pipefail         # Use last non-zero exit code in a pipeline
 #set -o xtrace          # Trace the execution of the script (debug)
 
 docker rm -f caddytest || true;
-
-docker run -it --rm \
---name caddytest \
--p 2015:2015 \
--v $(pwd)/srv:/srv \
-devmtl/caddyfire:0.11.1-d

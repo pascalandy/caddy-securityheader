@@ -1,13 +1,16 @@
-:2015 {
+0.0.0.0:2015 {
     root /srv
-    cache {
-        default_max_age 15m
-        path /caddycache
-    }
+
+    cache
+
+    log stdout
+    
+    errors stdout
+
     gzip {
         level 9
-        min_length 1
     }
+
     header / {
         Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
         X-Xss-Protection "1; mode=block"
@@ -16,7 +19,10 @@
         Content-Security-Policy "upgrade-insecure-requests"
         Referrer-Policy "strict-origin-when-cross-origin"
         Cache-Control "public, max-age=15, must-revalidate"
-        Content-Type "text/html; charset=UTF-8"
         Feature-Policy "accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'self'; camera 'none'; encrypted-media 'none'; fullscreen 'self'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture *; speaker 'none'; sync-xhr 'none'; usb 'none'; vr 'none'"
     }
 }
+
+#
+# https://github.com/pascalandy/caddy-securityheader
+# 

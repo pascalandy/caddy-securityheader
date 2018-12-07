@@ -12,4 +12,7 @@ docker run -it --rm \
 --name caddytest \
 -p 2015:2015 \
 -v $(pwd)/srv:/srv \
+-v $(pwd)/Caddyfile:/etc/Caddyfile \
 devmtl/caddyfire:0.11.1-d
+
+# very handy to test your Caddyfile configs locally
