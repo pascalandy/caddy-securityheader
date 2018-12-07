@@ -6,10 +6,22 @@ set -o nounset          # Disallow expansion of unset variables
 set -o pipefail         # Use last non-zero exit code in a pipeline
 #set -o xtrace          # Trace the execution of the script (debug)
 
-docker rm -f caddytest || true;
+# var
+source ./build-config.sh .
+img_name=$ENV_IMG_VERSION
+ctn_name="caddydev"
 
+# remove if runnning
+if [ $(docker inspect -f '{{.State.Running}}' ${ctn_name}) = "true" ]; then
+  docker rm -f ${ctn_name}
+  sleep 1
+fi
+
+clear;
+
+# run
 docker run -it --rm \
---name caddytest \
+--name ${ctn_name} \
 -p 2015:2015 \
 -v $(pwd)/srv:/srv \
-devmtl/caddyfire:0.11.1-d
+${img_name}
