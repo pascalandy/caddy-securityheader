@@ -104,6 +104,9 @@ VOLUME /etc/.caddy /srv
 WORKDIR /srv
 EXPOSE 2015
 
+#healthcheck
+#HEALTHCHECK CMD curl --fail http://localhost:2015/ || exit 1
+
 ENTRYPOINT ["/sbin/tini", "--", "/bin/caddy" ]
 
 CMD ["--conf", "/etc/Caddyfile", "--log", "stdout" ]
