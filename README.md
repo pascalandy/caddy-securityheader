@@ -1,9 +1,19 @@
 
-# [caddy](https://hub.docker.com/r/productionwentdown/caddy/) [![](https://images.microbadger.com/badges/version/productionwentdown/caddy.svg)](https://microbadger.com/images/productionwentdown/caddy "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/productionwentdown/caddy.svg)](https://microbadger.com/images/productionwentdown/caddy "Get your own image badge on microbadger.com")
+# Why forking?
 
-A tiny 4MB Caddy image compressed with [UPX](https://github.com/upx/upx).
+I maintained a fork of the official projet because:
 
-> Notice: I keep this manually updated. If it goes out of date, ping me via Twitter [@serverwentdown](https://twitter.com/serverwentdown).
+- Run under alpine 3.8
+- Added [UPX](https://github.com/upx/upx)
+- Added `curl` to do the healthcheck when `docker service create`
+- Added tiny
+- Removed exposing 80 443 as it’s manage by Traefik
+- **Caddyfile config use case**: I don’t use it as a proxy but only to host a pure static website. No auth or anything fancy.
+- **A+** on [security header](https://securityheaders.com/) is active
+
+**Screenshot**:
+
+![screen shot 2018-12-06 at 7 48 19 pm](https://user-images.githubusercontent.com/6694151/49621138-e574a080-f991-11e8-8a8e-d9a2b2a4a974.jpg)
 
 # Usage
 
