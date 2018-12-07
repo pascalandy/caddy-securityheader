@@ -1,0 +1,115 @@
+# Directories
+############
+/this_dir
+
+# Files (bypass sensitive files)
+############
+this-script.sh
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# =========================
+# Operating System Files
+# =========================
+
+# OS files
+# =========================
+
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+ehthumbs.db
+
+Thumbs.db
+.AppleDB
+.AppleDesktop
+.apdisk
+.Mobile*
+.disk_*
+
+.AppleDouble
+.LSOverride
+.TemporaryItems
+.DocumentRevisions-V100
+.fseventsd
+.dbfseventsd
+.com.apple.timemachine.donotpresent
+.com.apple.timemachine.supported
+.PKInstallSandboxManager
+.PKInstallSandboxManager-SystemSoftware
+.file
+.hotfiles.btree
+.quota.ops.user
+.quota.user
+.quota.ops.group
+.quota.group
+.vol
+.efi
+.metadata_never_index
+
+# Thumbnails
+############
+._*
+
+# Sherlock files
+################
+TheFindByContentFolder
+TheVolumeSettingsFolder
+.FBCIndex
+.FBCSemaphoreFile
+.FBCLockFolder
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Thumbnails
+._*
+
+# VScode Files
+.vscode
