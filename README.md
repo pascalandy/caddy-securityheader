@@ -3,21 +3,21 @@
 
 # Why forking?
 
-I maintained a fork of the official projet because:
+I maintained a fork of the official project because:
 
 - Cache is active
 - Run under alpine 3.8 (not scratch)
 - Added [UPX](https://github.com/upx/upx)
 - Added `curl` to do the healthcheck when `docker service create`. You must use healthcheck for serious orchestration.
 - Added [tiny](https://github.com/krallin/tini), init for containers 
-- Removed exposing 80 443 as it’s manage by Traefik (proxy). See my super-duper [docker-stack](https://github.com/pascalandy/docker-stack-this) for a better context. 
+- Removed exposing 80 443 as it's managed by Traefik (proxy). See my super-duper [docker-stack](https://github.com/pascalandy/docker-stack-this) for a better context. 
 
 
 # Security Header screenshot
 
 Get an **A+** on [security header](https://securityheaders.com/) out of the box. 
 
-Before I was using CloudFlare worker (5$ per month) to get the same result. I asked myself, how does the ‘real server’ are configured to manage the scurity-header? This is how.
+Before I was using CloudFlare worker (5$ per month) to get the same result. I asked myself, how does a ‘real server’ is configured to manage the security-header? This is how.
 
 ![screen shot 2018-12-06 at 7 48 19 pm](https://user-images.githubusercontent.com/6694151/49621138-e574a080-f991-11e8-8a8e-d9a2b2a4a974.jpg)
 
