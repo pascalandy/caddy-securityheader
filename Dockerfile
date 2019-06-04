@@ -41,7 +41,7 @@ RUN mv caddy /
 #
 FROM debian:stable as compress
 
-ARG upx_version="3.95"
+ARG upx_version="3.94"
 
 # dependencies
 RUN apt-get update && apt install -y --no-install-recommends \
